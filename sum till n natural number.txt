@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int sum(int n)
+{
+    if(n<=1)
+    {
+        return n;
+    }
+    return n+sum(n-1);
+}
+
+int main()
+{
+    cout<<"enter the number till which you want sum:"<<endl;
+    int n;
+    cin>>n;
+    cout<<sum(n)<<endl;
+    
+    return 0;
+}
+
+OUTPUT:
+
+enter the number till which you want sum:
+10
+55
