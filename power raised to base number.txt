@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int power(int n, int p)
+{
+    if(p!=0)
+    {
+        return n*power(n, p-1);
+    }
+    return 1;
+}
+
+int main()
+{ 
+    int n,p;
+    cout<<"enter the base value"<<endl;
+    cin>>n;
+    
+    cout<<"enter the raised power of base"<<endl;
+    cin>>p;
+    
+    cout<<"the value of base raised to power is:"<<endl;
+    cout<<power(n, p)<<endl;
+    
+    return 0;
+}
+
+OUTPUT:
+
+enter the base value
+3
+enter the raised power of base
+5
+the value of base raised to power is:
+243
