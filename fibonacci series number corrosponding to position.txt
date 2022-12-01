@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int fibo(int n)
+{
+    if(n<=1)
+    {
+        return n;
+    }
+    return fibo(n-1)+fibo(n-2);
+}
+
+int main()
+{
+    int n;
+    cout<<"enter the value of index"<<endl;
+    cin>>n;
+    cout<<"value of the index"<<endl;
+    cout<<fibo(n)<<endl;
+}
+
+OUTPUT:
+
+enter the value of index
+5
+value of the index
+5
