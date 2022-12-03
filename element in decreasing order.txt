@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int decr(int n)
+{
+    if(n<=1)
+    {
+       return 0;
+    }
+    cout<<n<<endl;
+    return decr(n-1);
+}
+
+int main()
+{
+    int n;
+    cout<<"enter the value of index"<<endl;
+    cin>>n;
+    cout<<"element in decreasing order"<<endl;
+    cout<<decr(n);
+}
+
+OUTPUT:
+
+enter the value of index
+10
+element in decreasing order
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
