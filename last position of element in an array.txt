@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int lastoccur(int arr[],int count,int n,int i,int key)
+{
+    if(i==n)
+    {
+        return count;
+    }
+    
+    if(arr[i]==key)
+    {
+        count=i;
+        return lastoccur(arr,count,n,i+1,key);
+    }
+    
+    return lastoccur(arr,count,n,i+1,key);
+}
+
+int main()
+{
+    int count=0;
+    int i=0;
+    int key=5;
+    int arr[]={1,2,3,4,5,3,4,5,6,7};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"last position of element in an array"<<endl;
+    cout<<lastoccur(arr,count,n,i,key);
+}
+
+
+OUTPUT:
+
+position of element in an array
+7
