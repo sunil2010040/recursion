@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+void revstring(string a,int b)
+{
+    if(b>=0)
+    {
+        cout<<a[b];
+        revstring(a,b-1);
+    }
+    
+}
+
+int main()
+{
+    string a="binod";
+    int b=a.length();
+    revstring(a,b);
+}
+
+
+OUTPUT:
+
+
+enter the string
+permutation
+reverse of string is:
+noitatumrep
+
