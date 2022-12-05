@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+void TOH(int n,char from,char to,char help)
+{
+    if(n==0)
+    {
+        return ;
+    }
+    
+    TOH(n-1,from,help,to);
+    cout<<"move from"<<from<<"to"<<to<<endl;
+    TOH(n-1,help,to,from);
+}
+
+
+
+int main()
+{
+    int n;
+    cout<<"Enter the no. of towers"<<endl;
+    cin>>n;
+    TOH(n,'A','B','C');
+}
+
+OUTPUT:
+
+Enter the no. of towers
+3
+move fromAtoB
+move fromAtoC
+move fromBtoC
+move fromAtoB
+move fromCtoA
+move fromCtoB
+move fromAtoB
