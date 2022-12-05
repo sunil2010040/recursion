@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+char hello(string a,int i,string j)
+{
+    if(a[i]=='p' &&a[i+1]=='i')
+    {
+        a.erase(i,2);
+        a.insert(i,j);
+        cout<<a[i];
+        return hello(a,i+1,j);
+    }
+    cout<<a[i];
+    return hello(a,i+1,j);
+}
+
+int main()
+{
+    int i=-1;
+    string j="3.14";
+    string a="pippxxppiixipi";
+    hello(a,i+1,j);
+}
+
+OUTPUT:
+
+3.14ppxxp3.14ixi3.14
